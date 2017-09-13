@@ -1,5 +1,5 @@
 #include<string.h>
-
+#define MAX 100000
 void append(char* s, char c)
 {
     int len = strlen(s);
@@ -8,7 +8,7 @@ void append(char* s, char c)
 }
 
 void linewc(char text[]){
-    char word[100][100];
+    char word[MAX][100];
     int k,p;
 
     int len = 0;
@@ -55,7 +55,7 @@ void linewc(char text[]){
     }
 }
 
-int subcheck(char str[100],char substr[100]){
+int subcheck(char str[MAX],char substr[MAX]){
     int len1 = 0, len2 = 0, i, j, flag;
 
 
@@ -80,7 +80,7 @@ int subcheck(char str[100],char substr[100]){
     return 0;
 }
 
-float stringmatch(char text1[100],char text2 [100]){
+float stringmatch(char text1[],char text2 []){
 
     char maxss[100]="";
     int i=0,j=0;
@@ -103,7 +103,6 @@ float stringmatch(char text1[100],char text2 [100]){
             append(substr,text1[i]);
         }
     }
-
     float per;
     per = strlen(maxss)*200/(len1+len2);
     return per;

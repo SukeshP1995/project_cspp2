@@ -1,12 +1,12 @@
 #include<string.h>
-
+#include<math.h>
 struct dictionary{
     char word[100];
     int count;
-}dict[100], dict1[100], dict2[100];
+}dict[1000], dict1[1000], dict2[1000];
 
 int dicreator(char text[], struct dictionary dict[] ){
-    char word[100][100];
+    char word[1000][100];
     int k,p;
 
     int len = 0;
@@ -66,7 +66,7 @@ int dicreator(char text[], struct dictionary dict[] ){
         }
         if(flag){
             strcpy(dict[i].word,word[k]);
-            printf("%s\n",dict[i].word);
+
             dict[i].count = 1;
             len += 1;
         }
